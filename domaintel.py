@@ -111,7 +111,7 @@ def main(argv: Optional[list[str]] = None) -> int:
             return 1
         print(f"error: RDAP lookup failed: HTTP {exc.code}", file=sys.stderr)
         return 2
-    except Exception as exc:  # noqa: BLE001 - report any lookup failure cleanly
+    except Exception as exc:  # noqa: BLE001
         print(f"error: {exc}", file=sys.stderr)
         return 2
 
